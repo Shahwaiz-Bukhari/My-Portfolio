@@ -36,7 +36,7 @@ export default function HomeSection() {
             fontWeight: 600,
           }}
         >
-          ✦ Front-End Engineer
+          ✦  Web Developer
         </Typography>
       </Stack>
 
