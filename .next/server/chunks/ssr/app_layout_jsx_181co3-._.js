@@ -1,0 +1,7 @@
+module.exports=[98421,a=>{"use strict";var b=a.i(7997);let c="data:image/svg+xml,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="16" fill="#15131F"/>
+      <text x="32" y="42" font-family="monospace" font-size="26" font-weight="700"
+        text-anchor="middle" fill="#C8FF4D">&lt;/&gt;</text>
+    </svg>`);a.s(["default",0,function({children:a}){return(0,b.jsxs)("html",{lang:"en","data-scroll-behavior":"smooth",children:[(0,b.jsxs)("head",{children:[(0,b.jsx)("link",{rel:"stylesheet",href:"https://api.fontshare.com/v2/css?f[]=bricolage-grotesque@700&display=swap"}),(0,b.jsx)("link",{rel:"preconnect",href:"https://fonts.googleapis.com"}),(0,b.jsx)("link",{rel:"preconnect",href:"https://fonts.gstatic.com",crossOrigin:"anonymous"}),(0,b.jsx)("link",{href:"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap",rel:"stylesheet"})]}),(0,b.jsx)("body",{children:a})]})},"metadata",0,{title:"Shahwaiz Ali — Front-End Engineer",description:"Portfolio of Shahwaiz Ali, a Lahore-based Front-End Engineer building React and Next.js web apps with GSAP-powered interactions.",openGraph:{title:"Shahwaiz Ali — Front-End Engineer",description:"Portfolio of Shahwaiz Ali, a Lahore-based Front-End Engineer building React and Next.js web apps with GSAP-powered interactions.",type:"website",url:"https://shahwaiz.dev"},icons:{icon:c}}])},46122,a=>{a.n(a.i(98421))}];
+
+//# sourceMappingURL=app_layout_jsx_181co3-._.js.map
