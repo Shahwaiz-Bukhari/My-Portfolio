@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <span>
-          © {year} {person.displayName}. Built with Next.js + GSAP.
+          © {year} {person.displayName}.
         </span>
         <nav className="footer__links" aria-label="Social">
           <a href={person.linkedin} target="_blank" rel="noopener noreferrer">

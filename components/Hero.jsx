@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@/lib/useGSAP";
 import { person, stickers } from "@/lib/data";
 import { gsap, registerGsap, prefersReducedMotion } from "@/lib/animations";
 
@@ -143,16 +143,16 @@ export default function Hero() {
 
         <h1 className="hero__headline">
           <span className="hero__line">
-            <span>I build interfaces</span>
+            <span>Building interfaces </span>
           </span>
           <span className="hero__line">
-            <span>that move, load fast,</span>
+            <span>that make an impression</span>
           </span>
-          <span className="hero__line">
+          {/* <span className="hero__line">
             <span>
               and still feel <Squiggle />
             </span>
-          </span>
+          </span> */}
         </h1>
 
         <p className="hero__subhead">{person.subhead}</p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@/lib/useGSAP";
 import { stack } from "@/lib/data";
 import { gsap, registerGsap, prefersReducedMotion } from "@/lib/animations";
 

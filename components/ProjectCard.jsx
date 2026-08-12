@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { prefersReducedMotion, isTouchDevice } from "@/lib/animations";
 
 // Strips protocol/trailing slash for a clean chrome-bar URL.
@@ -10,6 +10,26 @@ function prettyUrl(url) {
 
 export default function ProjectCard({ project }) {
   const cardRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  // ---- Intersection Observer: mount iframe only when card is near viewport ----
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect(); // only need to trigger once
+        }
+      },
+      { rootMargin: "200px" } // start loading slightly before card is visible
+    );
+
+    observer.observe(card);
+    return () => observer.disconnect();
+  }, []);
 
   // ---- Magnetic 3D tilt from pointer position (desktop + motion only) ----
   const handleMove = (e) => {
@@ -52,16 +72,17 @@ export default function ProjectCard({ project }) {
             background: `linear-gradient(135deg, ${project.accent}, var(--ink))`,
           }}
         />
-        <div className="card__iframe-wrap">
-          <iframe
-            className="card__iframe"
-            src={project.url}
-            title={`${project.title} live preview`}
-            loading="lazy"
-            tabIndex={-1}
-            aria-hidden="true"
-          />
-        </div>
+        {inView && (
+          <div className="card__iframe-wrap">
+            <iframe
+              className="card__iframe"
+              src={project.url}
+              title={`${project.title} live preview`}
+              tabIndex={-1}
+              aria-hidden="true"
+            />
+          </div>
+        )}
         <span className="card__badge">
           <span className="live-dot" />
           live
@@ -94,3 +115,4 @@ export default function ProjectCard({ project }) {
     </article>
   );
 }
+

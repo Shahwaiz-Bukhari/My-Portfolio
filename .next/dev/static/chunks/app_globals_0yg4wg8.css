@@ -82,6 +82,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   text-transform: uppercase;
   letter-spacing: .12em;
   background: var(--white);
+  color: var(--ink);
   border: var(--border);
   box-shadow: var(--shadow-sm);
   border-radius: 999px;
@@ -558,7 +559,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 }
 
 .timeline {
+  margin: 0;
   padding-left: 30px;
+  list-style: none;
   position: relative;
 }
 

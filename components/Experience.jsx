@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@/lib/useGSAP";
 import { timeline } from "@/lib/data";
 import { gsap, registerGsap, prefersReducedMotion } from "@/lib/animations";
 
@@ -42,7 +42,7 @@ export default function Experience() {
             <span className="eyebrow">experience</span>
             <h2>The path so far</h2>
             <p>
-              A short timeline of where I&apos;ve worked and studied — from computer
+              A short timeline of where I&apos;ve worked and studied from computer
               science fundamentals to shipping production front-ends.
             </p>
           </div>
